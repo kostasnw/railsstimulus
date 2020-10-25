@@ -1,7 +1,11 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  initialize() {
-    console.log('Hello from stimulus!');
+  static get targets() {
+    return ['name'];
+  }
+
+  countCharacters(event) {
+    console.log(event);
   }
 }
