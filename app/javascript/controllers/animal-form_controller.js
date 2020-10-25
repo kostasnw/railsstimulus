@@ -2,10 +2,11 @@ import { Controller } from "stimulus"
 
 export default class extends Controller {
   static get targets() {
-    return ['name'];
+    return ['name', 'counter'];
   }
 
   countCharacters(event) {
-    console.log(event);
+    let characters = this.nameTarget.value.length;
+    this.counterTarget.innerText = characters;
   }
 }

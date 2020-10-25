@@ -15,6 +15,7 @@
     <div class="field">
       <%= form.label :name %>
       <%= form.text_field :name, 'data-target' => "animal-form.name", 'data-action' => 'keyup->animal-form#countCharacters' %>
+      Characters: <span data-target='animal-form.counter'><%= animal.name.to_s.size %></span>
     </div>
 
     <div class="field">
